@@ -273,8 +273,9 @@ public class MainActivity extends CheckPermissionsActivity
             Intent intent = new Intent(MainActivity.this, ClothesActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_settings) {
-            //穿衣指南
-            Intent intent = new Intent(MainActivity.this, ClothesActivity.class);
+            //闹钟
+            Intent intent = new Intent();
+            intent.setClass(MainActivity.this, com.loonggg.alarmmanager.clock.ClockMainActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_about) {
             //系统反馈

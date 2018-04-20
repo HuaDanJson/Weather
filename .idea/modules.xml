@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ClockApp/ClockApp.iml" filepath="$PROJECT_DIR$/ClockApp/ClockApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/SmallWeather.iml" filepath="$PROJECT_DIR$/.idea/SmallWeather.iml" />
       <module fileurl="file://$PROJECT_DIR$/SmallWeather.iml" filepath="$PROJECT_DIR$/SmallWeather.iml" />
+      <module fileurl="file://$PROJECT_DIR$/alarmmanagerclock/alarmmanagerclock.iml" filepath="$PROJECT_DIR$/alarmmanagerclock/alarmmanagerclock.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
