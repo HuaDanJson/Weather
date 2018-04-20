@@ -90,8 +90,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".view.ClothesActivity"/>
-
+        <activity
+            android:name=".view.ClothesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
 
     </application>
 
