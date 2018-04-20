@@ -58,7 +58,6 @@
         <meta-data
             android:name="com.amap.api.v2.apikey"
             android:value="6e5bf72b201049e63fab67bc2b37fa3c">
-            /
         </meta-data>
 
         <service android:name="com.amap.api.location.APSService"/>
@@ -75,7 +74,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
-            android:name=".view.AboutActivity"
+            android:name=".view.FeedBackActivity"
             android:label="@string/title_activity_about"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"/>
@@ -83,6 +82,7 @@
             android:name=".view.FirstActivity"
             android:screenOrientation="portrait"
             android:theme="@style/FirstTheme">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

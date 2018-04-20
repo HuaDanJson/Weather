@@ -280,7 +280,7 @@ public class MainActivity extends CheckPermissionsActivity
             startActivity(intent);
         } else if (id == R.id.nav_about) {
             //系统反馈
-            Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+            Intent intent = new Intent(MainActivity.this, FeedBackActivity.class);
             startActivity(intent);
         }
 
