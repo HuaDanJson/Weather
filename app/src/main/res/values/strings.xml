@@ -25,4 +25,8 @@
     <string name="title_activity_first">FirstActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="feedback_activity_commit_text">提交反馈</string>
+    <string name="feedback_activity_edit_mail">反馈信息</string>
+    <string name="feedback_activity_edit_hint_text">请填写反馈信息 </string>
 </resources>

@@ -54,6 +54,7 @@ public class MainActivity extends CheckPermissionsActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        Bmob.initialize(this, "eb546e9aa3cfde289f1a664af32a6863");
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         initDrawer();
