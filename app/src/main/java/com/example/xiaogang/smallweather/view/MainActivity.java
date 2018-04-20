@@ -24,6 +24,8 @@ import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
+import com.blankj.utilcode.constant.PermissionConstants;
+import com.blankj.utilcode.util.PermissionUtils;
 import com.example.xiaogang.smallweather.R;
 import com.example.xiaogang.smallweather.adapter.WeatherAdapter;
 import com.example.xiaogang.smallweather.constants.AppConstant;
@@ -34,6 +36,8 @@ import com.example.xiaogang.smallweather.util.NetUtil;
 import com.example.xiaogang.smallweather.util.SharedPrefUtils;
 import com.example.xiaogang.smallweather.util.SharedPreferenceUtil;
 import com.example.xiaogang.smallweather.util.Util;
+
+import java.util.List;
 
 import rx.Subscriber;
 
@@ -70,6 +74,28 @@ public class MainActivity extends CheckPermissionsActivity
         intentFilter.addAction("action.refreshcity");
         registerReceiver(mRefreshBroadcastReceiver, intentFilter);
         linearLayout = (LinearLayout) findViewById(R.id.noview);
+
+        PermissionUtils.permission(PermissionConstants.STORAGE)
+                .rationale(new PermissionUtils.OnRationaleListener() {
+                    @Override
+                    public void rationale(final ShouldRequest shouldRequest) {
+                        shouldRequest.again(true);
+                    }
+                })
+                .callback(new PermissionUtils.FullCallback() {
+                    @Override
+                    public void onGranted(List<String> permissionsGranted) {
+
+                    }
+
+                    @Override
+                    public void onDenied(List<String> permissionsDeniedForever,
+                                         List<String> permissionsDenied) {
+                        if (!permissionsDeniedForever.isEmpty()) {
+                            PermissionUtils.launchAppDetailsSettings();
+                        }
+                    }
+                }).request();
 
     }
 

@@ -1,5 +1,6 @@
 package com.example.xiaogang.smallweather.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.EditText;
@@ -31,8 +32,13 @@ public class FeedBackActivity extends AppCompatActivity {
         finish();
     }
 
-    @OnClick(R.id.textView)
+    @OnClick(R.id.llFeedbackActivityCommit)
     public void submitClick() {
         feedbackValue = mEditText.getText().toString();
+        Intent mIntent = new Intent(Intent.ACTION_VIEW);
+        mIntent.putExtra("address", "18800176200");
+        mIntent.putExtra("sms_body", feedbackValue);
+        mIntent.setType("vnd.android-dir/mms-sms");
+        startActivity(mIntent);
     }
 }

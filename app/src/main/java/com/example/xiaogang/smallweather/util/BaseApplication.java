@@ -2,8 +2,8 @@ package com.example.xiaogang.smallweather.util;
 
 import android.app.Application;
 import android.content.Context;
-import android.support.v7.app.AppCompatDelegate;
 
+import com.blankj.utilcode.util.Utils;
 
 
 /**
@@ -19,7 +19,7 @@ public class BaseApplication extends Application {
     public void onCreate() {
         super.onCreate();
         mAppContext = getApplicationContext();
-
+        Utils.init(getApplicationContext());
     }
 
 
